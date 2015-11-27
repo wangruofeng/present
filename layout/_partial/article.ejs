@@ -12,16 +12,41 @@
     <% } %>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
+     <!--    >
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
           <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            <a href="<%- config.root %><%- post.path %>#more"><%= theme.excerpt_link %></a>
           </p>
         <% } %>
+        <! -->
       <% } else { %>
         <%- post.content %>
       <% } %>
     </div>
+      <footer class="article-footer">
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_renren"></a>
+  <a href="http://www.jiathis.com/share?uid=1963900" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1407816065752321" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+<br/>
+
+      原创文章，转载请注明原地址：<a href="http://wangruofeng007.com">wangruofeng007.com</a>
+      <br/>
+
+    </footer>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
       <% if (post.comments && config.disqus_shortname){ %>
@@ -35,10 +60,22 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
+
+<% if (!index && post.comments){ %>
 <section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
+  <!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"sunnyxx"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = 'http://static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0]
+          || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+  </script>
+<!-- Duoshuo Comment END -->
 </section>
 <% } %>

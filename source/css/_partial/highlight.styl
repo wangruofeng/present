@@ -14,26 +14,32 @@ highlight-purple = #cc99cc
 
 $code-block
   background: highlight-background
-  margin: 0 article-padding * -1
-  padding: 15px article-padding
+  /*margin: 0 article-padding * -1*/
+  margin: auto
+  padding: 5px article-padding
   border-style: solid
   border-color: color-border
-  border-width: 1px 0
+  border-width: 0px 0
+  border-radius: 5px
   overflow: auto
   color: highlight-foreground
   line-height: font-size * line-height
 
 $line-numbers
   color: #666
-  font-size: 0.85em
+  font-size: 0.8em
 
 .article-entry
   pre, code
     font-family: font-mono
   code
-    background: color-background
+    background: #e3e3e3
+    color: #666
+    border-radius: 3px
+    border-width 1px
+    border-color: #fff
     text-shadow: 0 1px #fff
-    padding: 0 0.3em
+    padding: 0.1em 0.3em
   pre
     @extend $code-block
     code
@@ -49,6 +55,8 @@ $line-numbers
     table
       margin: 0
       width: auto
+      font-size: 12px
+      letter-spacing: 1px
     td
       border: none
       padding: 0
@@ -64,8 +72,6 @@ $line-numbers
       @extend $line-numbers
       text-align: right
       padding-right: 20px
-    .line
-      height: font-size * line-height
   .gist
     margin: 0 article-padding * -1
     border-style: solid

@@ -5,8 +5,8 @@ menu:
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
-fancybox: true
+excerpt_link: --->要看就点我啊<----
+fancybox: false
 
 # Sidebar
 sidebar: right
@@ -16,11 +16,10 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
+- friends
 
 # Miscellaneous
-google_analytics:
+# google_analytics: UA-50191432-1
 favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
+# twitter:
+# google_plus:
